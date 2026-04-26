@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Scrollbar styling for sidebars and timelines */
 .custom-scrollbar {
   scrollbar-width: thin;
