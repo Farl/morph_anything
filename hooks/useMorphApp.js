@@ -994,7 +994,7 @@ export function useMorphApp() {
 
       // Try to persist the sample image blob in IndexedDB so the session is restorable.
       try {
-        const res = await fetch("/websim-man.png");
+        const res = await fetch(`${import.meta.env.BASE_URL}websim-man.png`);
         if (res.ok) {
           const blob = await res.blob();
           await saveImageBlob(sampleName, blob);
@@ -1012,7 +1012,7 @@ export function useMorphApp() {
       saveSession(sampleName, sessionData);
       saveLastSessionKey(sampleName);
     };
-    img.src = "/websim-man.png";
+    img.src = `${import.meta.env.BASE_URL}websim-man.png`;
   }, [stopPlayback, setVertices, setLockedTriangles, setKeyframes, setActiveKeyframeId, setMode, setImage, setImageName, setAspectRatio]);
 
   const handleImageUpload = async (e) => {
