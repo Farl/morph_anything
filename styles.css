@@ -1,0 +1,41 @@
+/* Scrollbar styling for sidebars and timelines */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #64748b #020617;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #475569;
+  border-radius: 9999px;
+}
+
+/* Indeterminate progress bar animation */
+@keyframes progress-indet {
+  0% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+.animate-progress-indet {
+  animation: progress-indet 1.4s infinite linear;
+}
+
+/* Disable text and element selection across the app */
+html, body, #root, * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
